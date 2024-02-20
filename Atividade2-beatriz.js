@@ -20,10 +20,11 @@ var c = -1;
 console.log("O valor de delta é:", b ** 2 - 4 * a * c);
 
 var valor = 450;
-var desconto = 3;
+var desconto = 3/100;
+var valDesc = valor * desconto
 
-console.log("o valor do desconto vai ser", (valor * desconto) / 100);
-console.log("o valor final da compra é", valor - 13.5);
+console.log("o valor do desconto vai ser", + valDesc);
+console.log("o valor final da compra é", valor - valDesc);
 
 var t = 3.5
 var s = 95
