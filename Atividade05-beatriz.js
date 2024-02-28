@@ -7,8 +7,8 @@ function quantidade(combustivel, kms) {
   return combustivel * kms;
 }
 console.log(
-  `O carro de Claudia com 1 litro de combustivel pode percorrer ${quantidade(
-    1,
+  `O carro de Claudia com 3 litro de combustivel pode percorrer ${quantidade(
+    3,
     12
   )} km`
 );
