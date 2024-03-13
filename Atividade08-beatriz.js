@@ -14,14 +14,14 @@
 // apresentar(): Exibe as informações do aluno no formato:
 
 class Aluno {
-  constructor(ra, nome, dataNascimento, curso) {
+  constructor(ra, nome, anoNascimento, curso) {
     this.ra = ra;
     this.nome = nome;
-    this.dataNascimento = dataNascimento;
+    this.dataNascimento = anoNascimento;
     this.curso = curso;
   }
   calcularIdade() {
-    return 2024 - this.dataNascimento;
+    return 2024 - this.anoNascimento;
   }
   apresentar() {
     console.log(
@@ -34,3 +34,39 @@ class Aluno {
 
 const aluno1 = new Aluno(4503, "Beatriz", 2007, "Desenvolvimento de sistemas");
 aluno1.apresentar();
+
+//Crie e ultilize uma classa "Sorvete" contendo as propriedades : sabor, preço e tamanho (P | M | G)
+//Crie um sorvete de morango grande
+//Crie um sorvete de chocolate pequeno
+// Crie um sorvete de melancia medio
+// Altere o preço do sorvete de morango grande para R$ 10,51
+
+class Sorvete {
+  constructor(sabor, preco, tamanho) {
+    this.sabor = sabor;
+    this.preco = preco;
+    this.tamanho = tamanho;
+  }
+  sabores() {
+    console.log(
+      `O sabor do sorvete é ${this.sabor} tamanho ${this.tamanho} no valor de: ${this.getPreco()} reais`
+    );
+  }
+  getPreco(){ //proteção (encapsulando)
+    return this.preco;
+  }
+  setValor(novopreco) {
+    this.preco = novopreco;
+  }
+}
+const Sorvete1 = new Sorvete("morango", 10, "G");
+Sorvete1.sabores();
+
+const Sorvete2 = new Sorvete("chocolate", 6, "P");
+Sorvete2.sabores();
+
+const Sorvete3 = new Sorvete("melancia", 8, "M");
+Sorvete3.sabores();
+
+Sorvete1.setValor(10.51);
+Sorvete1.sabores();
