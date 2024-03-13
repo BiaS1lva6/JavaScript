@@ -70,3 +70,52 @@ Sorvete3.sabores();
 
 Sorvete1.setValor(10.51);
 Sorvete1.sabores();
+
+
+//1.Comparação de strings (sem case sensitive):
+//Escreva uma função em JavaScript que recebe duas strings e verifica se elas são iguais, ignorando o tamanho das letras (maiúsculas e minúsculas).
+console.log("------------------ex1-----------------------");
+
+class comparando { 
+  constructor(string1, string2) {
+    this.string1 = string1.toLowerCase()
+    this.string2 = string2.toLowerCase()
+}
+
+apresentando() {
+  return this.string1 === this.string2;
+} 
+}
+const comparacao = new comparando("Olá", "oi");
+console.log(comparacao.apresentando());
+
+
+//2.Extrair números de uma string:
+//Crie uma função em JavaScript que recebe uma string e retorna uma lista contendo apenas os números encontrados nela.
+console.log("-----------ex2--------------")
+function extraindoN(string) {
+  const number = /\d+/g;
+  const numeros = string.match(number);
+  return numeros ? numeros.map(Number) : [];
+}
+
+const string = "Tenho 4 gatos e 1 tartaruga .";
+console.log(extraindoN(string)); 
+
+//3.Inverter a ordem das palavras em uma frase: Desenvolva uma função em JavaScript que //recebe uma frase e retorna uma nova string com a ordem das palavras invertida.
+console.log("----------------ex3--------------");
+class inversordeordem {
+  constructor(frase) {
+    this.frase = frase;
+  }
+
+  inverterOrdem() {
+    const palavras = this.frase.split(" ");
+    const ordemInvertida = palavras.reverse();
+    return ordemInvertida.join(" ");
+  }
+}
+
+const inversor = new inversordeordem("O gato faz o miau");
+console.log(inversor.inverterOrdem()); 
+
